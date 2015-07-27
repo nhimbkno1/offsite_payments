@@ -193,7 +193,7 @@ module OffsitePayments #:nodoc:
         end
 
         def acknowledge
-          secure? && (!success? || requery == "00")
+          secure? && (success? || requery == "00")
         end
 
         protected
